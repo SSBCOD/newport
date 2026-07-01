@@ -47,7 +47,7 @@
 // Reveal on scroll
 (function () {
   const targets = document.querySelectorAll(
-    '.about-card, .info-card, .skill-node, .ship, .tl-item, .contact-box'
+    '.about-card, .info-card, .skill-node, .ship, .tl-item, .contact-box, .orbit-wrap'
   );
   targets.forEach((el) => el.classList.add('reveal'));
 
@@ -78,4 +78,76 @@
       }
     });
   });
+})();
+
+// Draggable panel cards
+(function () {
+  document.querySelectorAll('.draggable').forEach((card) => {
+    let startX, startY, origX = 0, origY = 0, dragging = false;
+
+    const pointerDown = (e) => {
+      dragging = true;
+      card.classList.add('dragging');
+      const point = e.touches ? e.touches[0] : e;
+      startX = point.clientX;
+      startY = point.clientY;
+      const t = card.style.transform.match(/-?\d+(\.\d+)?/g);
+      origX = t ? parseFloat(t[0]) : 0;
+      origY = t ? parseFloat(t[1]) : 0;
+      window.addEventListener('mousemove', pointerMove);
+      window.addEventListener('touchmove', pointerMove, { passive: false });
+      window.addEventListener('mouseup', pointerUp);
+      window.addEventListener('touchend', pointerUp);
+    };
+
+    const pointerMove = (e) => {
+      if (!dragging) return;
+      e.preventDefault();
+      const point = e.touches ? e.touches[0] : e;
+      const dx = point.clientX - startX;
+      const dy = point.clientY - startY;
+      card.style.transform = `translate(${origX + dx}px, ${origY + dy}px)`;
+    };
+
+    const pointerUp = () => {
+      dragging = false;
+      card.classList.remove('dragging');
+      window.removeEventListener('mousemove', pointerMove);
+      window.removeEventListener('touchmove', pointerMove);
+      window.removeEventListener('mouseup', pointerUp);
+      window.removeEventListener('touchend', pointerUp);
+    };
+
+    const handle = card.querySelector('.drag-handle') || card;
+    handle.addEventListener('mousedown', pointerDown);
+    handle.addEventListener('touchstart', pointerDown, { passive: true });
+  });
+})();
+
+// i18n language switcher
+(function () {
+  function applyLanguage(lang) {
+    const dict = window.I18N && window.I18N[lang];
+    if (!dict) return;
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) {
+        el.innerHTML = dict[key];
+      }
+    });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-switch button').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    localStorage.setItem('ssb-lang', lang);
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach((btn) => {
+    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+  });
+
+  const saved = localStorage.getItem('ssb-lang');
+  if (saved && window.I18N && window.I18N[saved]) {
+    applyLanguage(saved);
+  }
 })();

@@ -20,13 +20,21 @@
 <header class="topbar">
   <a href="#home" class="logo">SSB<span>.</span></a>
   <nav class="navlinks">
-    <a href="#about">Обо мне</a>
-    <a href="#skills">Навыки</a>
-    <a href="#work">Проекты</a>
-    <a href="#experience">Опыт</a>
-    <a href="#contact">Контакт</a>
+    <a href="#about" data-i18n="nav.about">Обо мне</a>
+    <a href="#tools" data-i18n="nav.tools">Инструменты</a>
+    <a href="#skills" data-i18n="nav.skills">Навыки</a>
+    <a href="#work" data-i18n="nav.work">Проекты</a>
+    <a href="#experience" data-i18n="nav.experience">Опыт</a>
+    <a href="#contact" data-i18n="nav.contact">Контакт</a>
   </nav>
-  <a href="#contact" class="nav-cta">Связаться</a>
+  <div class="header-right">
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="kz">ҚАЗ</button>
+      <button type="button" data-lang="ru" class="active">РУС</button>
+      <button type="button" data-lang="en">ENG</button>
+    </div>
+    <a href="#contact" class="nav-cta" data-i18n="nav.cta">Связаться</a>
+  </div>
 </header>
 
 <main>
@@ -34,22 +42,22 @@
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="hero-badge">
-      <span class="dot"></span> Открыт к Junior · Удалённо
+      <span class="dot"></span> <span data-i18n="hero.badge">Открыт к Junior · Удалённо</span>
     </div>
     <div class="hero-grid">
       <div class="hero-text">
-        <p class="eyebrow">// ПОРТФОЛИО — МИССИЯ 2026</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">// ПОРТФОЛИО — МИССИЯ 2026</p>
         <h1>Сакен<br><span class="grad">Сериков</span></h1>
-        <p class="role">UI/UX &amp; Mobile Designer</p>
-        <p class="lead">Проектирую интерфейсы мобильных приложений и сайты — от идеи и вайрфреймов до чистого макета в Figma. Основатель мини-студии <strong>ALAU</strong>. Работаю по гайдлайнам <strong>iOS HIG</strong> и <strong>Material Design</strong>.</p>
+        <p class="role" data-i18n="hero.role">UI/UX &amp; Mobile Designer</p>
+        <p class="lead" data-i18n="hero.lead">Проектирую интерфейсы мобильных приложений и сайты — от идеи и вайрфреймов до чистого макета в Figma. Основатель мини-студии <strong>ALAU</strong>. Работаю по гайдлайнам <strong>iOS HIG</strong> и <strong>Material Design</strong>.</p>
         <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">Смотреть проекты</a>
-          <a href="mailto:sakenserikov58@gmail.com" class="btn btn-ghost">Связаться</a>
+          <a href="#work" class="btn btn-primary" data-i18n="hero.btnWork">Смотреть проекты</a>
+          <a href="mailto:sakenserikov58@gmail.com" class="btn btn-ghost" data-i18n="hero.btnContact">Связаться</a>
         </div>
         <div class="hero-stats">
-          <div><b>10+</b><span>экранов Qayda Taxi</span></div>
-          <div><b>6+</b><span>завершённых проектов</span></div>
-          <div><b>3</b><span>языка · KZ / RU / EN</span></div>
+          <div><b>10+</b><span data-i18n="hero.stat1">экранов Qayda Taxi</span></div>
+          <div><b>6+</b><span data-i18n="hero.stat2">завершённых проектов</span></div>
+          <div><b>3</b><span data-i18n="hero.stat3">языка · KZ / RU / EN</span></div>
         </div>
       </div>
       <div class="hero-visual">
@@ -61,22 +69,40 @@
         </div>
       </div>
     </div>
-    <div class="scroll-hint">SCROLL <span>↓</span></div>
+    <div class="scroll-hint"><span data-i18n="hero.scroll">SCROLL</span> <span>↓</span></div>
   </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span data-i18n="marquee.1">UI/UX DESIGNER</span><i>✦</i>
+      <span data-i18n="marquee.2">MOBILE DESIGNER</span><i>✦</i>
+      <span data-i18n="marquee.3">ОСНОВАТЕЛЬ ALAU DESIGN STUDIO</span><i>✦</i>
+      <span data-i18n="marquee.4">iOS HIG · MATERIAL DESIGN</span><i>✦</i>
+      <span data-i18n="marquee.5">FIGMA · PROTOTYPING</span><i>✦</i>
+      <span data-i18n="marquee.1">UI/UX DESIGNER</span><i>✦</i>
+      <span data-i18n="marquee.2">MOBILE DESIGNER</span><i>✦</i>
+      <span data-i18n="marquee.3">ОСНОВАТЕЛЬ ALAU DESIGN STUDIO</span><i>✦</i>
+      <span data-i18n="marquee.4">iOS HIG · MATERIAL DESIGN</span><i>✦</i>
+      <span data-i18n="marquee.5">FIGMA · PROTOTYPING</span><i>✦</i>
+    </div>
+  </div>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <p class="section-tag">01 · О СЕБЕ</p>
-    <h2 class="section-title">Профиль пилота</h2>
+    <p class="section-tag">01 · <span data-i18n="about.tag">О СЕБЕ</span></p>
+    <h2 class="section-title" data-i18n="about.title">Профиль пилота</h2>
+    <p class="section-sub" data-i18n="about.drag">Карточки — как модули на панели: перетащи, чтобы переставить.</p>
     <div class="about-grid">
-      <div class="about-card">
-        <p>Начинающий UI/UX и мобильный дизайнер из Алматы. Проектирую интерфейсы мобильных приложений и сайты — от идеи и вайрфреймов до чистого макета в Figma. Основатель мини-студии <strong>ALAU</strong>. Работаю по гайдлайнам <strong>iOS HIG</strong> и <strong>Material Design</strong>, готовлю экраны и графику по ТЗ.</p>
-        <p class="about-en">Aspiring UI/UX &amp; mobile designer based in Almaty. I design app interfaces and websites end-to-end in Figma, following iOS HIG and Material Design. Founder of ALAU, a small design studio.</p>
+      <div class="about-card draggable">
+        <span class="drag-handle">⠿</span>
+        <p data-i18n="about.bio">Начинающий UI/UX и мобильный дизайнер из Алматы. Проектирую интерфейсы мобильных приложений и сайты — от идеи и вайрфреймов до чистого макета в Figma. Основатель мини-студии <strong>ALAU</strong>. Работаю по гайдлайнам <strong>iOS HIG</strong> и <strong>Material Design</strong>, готовлю экраны и графику по ТЗ.</p>
       </div>
-      <div class="info-card">
-        <h3>Контакты</h3>
+      <div class="info-card draggable">
+        <span class="drag-handle">⠿</span>
+        <h3 data-i18n="about.contactsTitle">Контакты</h3>
         <ul class="info-list">
-          <li>📍 Алматы, Казахстан</li>
+          <li>📍 <span data-i18n="about.location">Алматы, Казахстан</span></li>
           <li>✉️ <a href="mailto:sakenserikov58@gmail.com">sakenserikov58@gmail.com</a></li>
           <li>📱 <a href="https://wa.me/77479537531">+7 747 953 75 31 · WhatsApp</a></li>
           <li>in <a href="https://linkedin.com/in/sakenserikov" target="_blank" rel="noopener">linkedin.com/in/sakenserikov</a></li>
@@ -84,50 +110,62 @@
           <li>✈ @alau_studio</li>
         </ul>
       </div>
-      <div class="info-card">
-        <h3>Языки</h3>
+      <div class="info-card draggable">
+        <span class="drag-handle">⠿</span>
+        <h3 data-i18n="about.langTitle">Языки</h3>
         <ul class="lang-list">
-          <li><span>Қазақша</span><em>родной</em></li>
-          <li><span>Русский</span><em>свободно</em></li>
-          <li><span>English</span><em>B1–B2</em></li>
+          <li><span data-i18n="about.lang1">Қазақша</span><em data-i18n="about.lang1v">родной</em></li>
+          <li><span data-i18n="about.lang2">Русский</span><em data-i18n="about.lang2v">свободно</em></li>
+          <li><span data-i18n="about.lang3">English</span><em>B1–B2</em></li>
         </ul>
-        <h3>Инструменты</h3>
-        <div class="chip-row">
-          <span class="chip">Figma</span>
-          <span class="chip">Adobe XD</span>
-          <span class="chip">Illustrator</span>
-          <span class="chip">Photoshop</span>
-          <span class="chip">After Effects</span>
-          <span class="chip">Framer</span>
-          <span class="chip">Lottie</span>
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS ORBIT -->
+  <section id="tools" class="section tools-section">
+    <p class="section-tag">02 · <span data-i18n="tools.tag">БОРТОВЫЕ СИСТЕМЫ</span></p>
+    <h2 class="section-title" data-i18n="tools.title">Инструменты</h2>
+    <p class="section-sub" data-i18n="tools.sub">Прокрути вниз — иконки собираются на орбите.</p>
+    <div class="orbit-wrap">
+      <div class="orbit-center">
+        <span data-i18n="tools.center">Мой набор инструментов</span>
+      </div>
+      <div class="orbit-ring">
+        <div class="orbit-icon" style="--i:0"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Fg</span><em>Figma</em></div></div></div>
+        <div class="orbit-icon" style="--i:1"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Xd</span><em>Adobe XD</em></div></div></div>
+        <div class="orbit-icon" style="--i:2"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Ai</span><em>Illustrator</em></div></div></div>
+        <div class="orbit-icon" style="--i:3"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Ps</span><em>Photoshop</em></div></div></div>
+        <div class="orbit-icon" style="--i:4"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Ae</span><em>After Effects</em></div></div></div>
+        <div class="orbit-icon" style="--i:5"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Fr</span><em>Framer</em></div></div></div>
+        <div class="orbit-icon" style="--i:6"><div class="orbit-fix"><div class="orbit-spin"><span class="icon-tile">Lt</span><em>Lottie</em></div></div></div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="section">
-    <p class="section-tag">02 · СИСТЕМЫ КОРАБЛЯ</p>
-    <h2 class="section-title">Навыки</h2>
+    <p class="section-tag">03 · <span data-i18n="skills.tag">СИСТЕМЫ КОРАБЛЯ</span></p>
+    <h2 class="section-title" data-i18n="skills.title">Навыки</h2>
     <div class="skills-grid">
-      <div class="skill-node"><span class="skill-icon">◈</span>UI-дизайн</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Мобильный дизайн (iOS / Android)</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>UX-исследование</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Прототипирование</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Дизайн-системы</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Motion · микроанимации</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Адаптив · Responsive</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Вёрстка: HTML · CSS · JS</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>React (базово)</div>
-      <div class="skill-node"><span class="skill-icon">◈</span>Графика для App Store / Google Play</div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.1">UI-дизайн</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.2">Мобильный дизайн (iOS / Android)</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.3">UX-исследование</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.4">Прототипирование</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.5">Дизайн-системы</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.6">Motion · микроанимации</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.7">Адаптив · Responsive</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.8">Вёрстка: HTML · CSS · JS</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.9">React (базово)</span></div>
+      <div class="skill-node"><span class="skill-icon">◈</span><span data-i18n="skills.10">Графика для App Store / Google Play</span></div>
     </div>
   </section>
 
   <!-- WORK / SHIPS -->
   <section id="work" class="section">
-    <p class="section-tag">03 · ФЛОТ ПРОЕКТОВ</p>
-    <h2 class="section-title">Избранные работы</h2>
-    <p class="section-sub">Каждый проект — корабль флота. Наведи, чтобы запустить двигатели.</p>
+    <p class="section-tag">04 · <span data-i18n="work.tag">ФЛОТ ПРОЕКТОВ</span></p>
+    <h2 class="section-title" data-i18n="work.title">Избранные работы</h2>
+    <p class="section-sub" data-i18n="work.sub">Каждый проект — корабль флота. Наведи, чтобы запустить двигатели.</p>
 
     <!-- FLAGSHIP -->
     <article class="ship ship-flagship">
@@ -137,7 +175,7 @@
           <div>
             <span class="ship-tag flagship-tag">FLAGSHIP</span>
             <h3>Qayda Taxi</h3>
-            <p class="ship-desc">Мобильное приложение такси · iOS &amp; Android · двуязычное RU / KZ</p>
+            <p class="ship-desc" data-i18n="flagship.desc">Мобильное приложение такси · iOS &amp; Android · двуязычное RU / KZ</p>
           </div>
           <div class="ship-badges">
             <span class="chip">UI/UX</span>
@@ -146,19 +184,19 @@
             <span class="chip">Flutter</span>
           </div>
         </div>
-        <p class="ship-text">Дизайн интерфейса для пассажиров и водителей: онбординг, пошаговая регистрация водителя, заказ поездки на карте, дашборд заработка с графиком, история поездок и профиль с тёмной темой. Полностью двуязычный интерфейс (русский / казахский), спроектирован по iOS HIG и Material Design.</p>
-        <p class="ship-role">Роль: UI/UX-дизайн · 10+ экранов · библиотека компонентов и единая дизайн-система.</p>
+        <p class="ship-text" data-i18n="flagship.text">Дизайн интерфейса для пассажиров и водителей: онбординг, пошаговая регистрация водителя, заказ поездки на карте, дашборд заработка с графиком, история поездок и профиль с тёмной темой. Полностью двуязычный интерфейс (русский / казахский), спроектирован по iOS HIG и Material Design.</p>
+        <p class="ship-role" data-i18n="flagship.role">Роль: UI/UX-дизайн · 10+ экранов · библиотека компонентов и единая дизайн-система.</p>
         <div class="windows-row">
-          <figure class="window-card"><img src="assets/img/qayda-1.png" alt="Мои авто" loading="lazy"><figcaption>Мои авто</figcaption></figure>
-          <figure class="window-card"><img src="assets/img/qayda-2.png" alt="Заработок" loading="lazy"><figcaption>Заработок</figcaption></figure>
-          <figure class="window-card"><img src="assets/img/qayda-3.png" alt="Регистрация авто" loading="lazy"><figcaption>Регистрация авто</figcaption></figure>
-          <figure class="window-card"><img src="assets/img/qayda-4.png" alt="Профиль, тёмная тема" loading="lazy"><figcaption>Профиль · тёмная тема</figcaption></figure>
+          <figure class="window-card"><img src="assets/img/qayda-1.png" alt="Мои авто" loading="lazy"><figcaption data-i18n="flagship.w1">Мои авто</figcaption></figure>
+          <figure class="window-card"><img src="assets/img/qayda-2.png" alt="Заработок" loading="lazy"><figcaption data-i18n="flagship.w2">Заработок</figcaption></figure>
+          <figure class="window-card"><img src="assets/img/qayda-3.png" alt="Регистрация авто" loading="lazy"><figcaption data-i18n="flagship.w3">Регистрация авто</figcaption></figure>
+          <figure class="window-card"><img src="assets/img/qayda-4.png" alt="Профиль, тёмная тема" loading="lazy"><figcaption data-i18n="flagship.w4">Профиль · тёмная тема</figcaption></figure>
         </div>
       </div>
       <div class="ship-thrusters"><span></span><span></span><span></span></div>
     </article>
 
-    <p class="fleet-sub-tag">ВЕБ-ПРОЕКТЫ <span>WEB &amp; APPS</span></p>
+    <p class="fleet-sub-tag"><span data-i18n="fleet.tag">ВЕБ-ПРОЕКТЫ</span> <span>WEB &amp; APPS</span></p>
 
     <div class="fleet-grid">
 
@@ -167,11 +205,11 @@
         <div class="ship-hull">
           <div class="ship-top">
             <h3>EcoLife</h3>
-            <span class="chip small-tag">Веб-app</span>
+            <span class="chip small-tag" data-i18n="p1.tag">Веб-app</span>
           </div>
           <p class="ship-link">ecosort-6mzo.onrender.com</p>
-          <p class="ship-text">Эко-платформа: карта пунктов приёма отходов, эко-акции, энциклопедия и тесты, личный кабинет.</p>
-          <div class="ship-badges"><span class="chip">JS</span><span class="chip">Карты</span><span class="chip">Auth</span></div>
+          <p class="ship-text" data-i18n="p1.desc">Эко-платформа: карта пунктов приёма отходов, эко-акции, энциклопедия и тесты, личный кабинет.</p>
+          <div class="ship-badges"><span class="chip">JS</span><span class="chip" data-i18n="p1.tag2">Карты</span><span class="chip">Auth</span></div>
         </div>
         <div class="ship-thrusters"><span></span><span></span></div>
       </article>
@@ -181,11 +219,11 @@
         <div class="ship-hull">
           <div class="ship-top">
             <h3>Oylanayiq</h3>
-            <span class="chip small-tag">Платформа</span>
+            <span class="chip small-tag" data-i18n="p2.tag">Платформа</span>
           </div>
           <p class="ship-link">oylanayiq.onrender.com</p>
-          <p class="ship-text">Казахстанская платформа логики: интерактивные задачи с авторизацией по SMS-коду.</p>
-          <div class="ship-badges"><span class="chip">Веб</span><span class="chip">UX</span><span class="chip">Auth</span></div>
+          <p class="ship-text" data-i18n="p2.desc">Казахстанская платформа логики: интерактивные задачи с авторизацией по SMS-коду.</p>
+          <div class="ship-badges"><span class="chip" data-i18n="p2.tag2">Веб</span><span class="chip">UX</span><span class="chip">Auth</span></div>
         </div>
         <div class="ship-thrusters"><span></span><span></span></div>
       </article>
@@ -195,11 +233,11 @@
         <div class="ship-hull">
           <div class="ship-top">
             <h3>Smart Shop</h3>
-            <span class="chip small-tag">Веб-app</span>
+            <span class="chip small-tag" data-i18n="p1.tag">Веб-app</span>
           </div>
           <p class="ship-link">smart-shopper-ruby.vercel.app</p>
-          <p class="ship-text">«Умный список покупок» — умный список покупок и планирование, адаптивный UI.</p>
-          <div class="ship-badges"><span class="chip">Веб</span><span class="chip">UI</span><span class="chip">React</span></div>
+          <p class="ship-text" data-i18n="p3.desc">«Умный список покупок» — умный список покупок и планирование, адаптивный UI.</p>
+          <div class="ship-badges"><span class="chip" data-i18n="p2.tag2">Веб</span><span class="chip">UI</span><span class="chip">React</span></div>
         </div>
         <div class="ship-thrusters"><span></span><span></span></div>
       </article>
@@ -209,10 +247,10 @@
         <div class="ship-hull">
           <div class="ship-top">
             <h3>SSB Portfolio</h3>
-            <span class="chip small-tag">Сайт</span>
+            <span class="chip small-tag" data-i18n="p4.tag">Сайт</span>
           </div>
           <p class="ship-link">ssbcod.github.io/portfolio</p>
-          <p class="ship-text">Личный сайт-портфолио: тёмная неоновая тема, мультиязычность EN / RU / KZ.</p>
+          <p class="ship-text" data-i18n="p4.desc">Личный сайт-портфолио: тёмная неоновая тема, мультиязычность EN / RU / KZ.</p>
           <div class="ship-badges"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span></div>
         </div>
         <div class="ship-thrusters"><span></span><span></span></div>
@@ -223,10 +261,10 @@
         <div class="ship-hull">
           <div class="ship-top">
             <h3>ALAU Design Studio</h3>
-            <span class="chip small-tag">Сайт</span>
+            <span class="chip small-tag" data-i18n="p4.tag">Сайт</span>
           </div>
           <p class="ship-link">ssbcod.github.io/alau-studio-site</p>
-          <p class="ship-text">Сайт собственной дизайн-студии: концепция «огонь в цифровом космосе», анимации на GSAP.</p>
+          <p class="ship-text" data-i18n="p5.desc">Сайт собственной дизайн-студии: концепция «огонь в цифровом космосе», анимации на GSAP.</p>
           <div class="ship-badges"><span class="chip">HTML</span><span class="chip">CSS/JS</span><span class="chip">GSAP</span></div>
         </div>
         <div class="ship-thrusters"><span></span><span></span></div>
@@ -237,21 +275,21 @@
 
   <!-- EXPERIENCE -->
   <section id="experience" class="section">
-    <p class="section-tag">04 · ЖУРНАЛ ПОЛЁТА</p>
-    <h2 class="section-title">Опыт</h2>
+    <p class="section-tag">05 · <span data-i18n="experience.tag">ЖУРНАЛ ПОЛЁТА</span></p>
+    <h2 class="section-title" data-i18n="experience.title">Опыт</h2>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-head">
-            <h3>ALAU Design Studio — Основатель, UI/UX-дизайнер</h3>
-            <span class="tl-date">2023 — наст.</span>
+            <h3 data-i18n="exp1.title">ALAU Design Studio — Основатель, UI/UX-дизайнер</h3>
+            <span class="tl-date" data-i18n="exp.date1">2023 — наст.</span>
           </div>
-          <p class="tl-place">Алматы · Удалённо</p>
+          <p class="tl-place" data-i18n="exp1.place">Алматы · Удалённо</p>
           <ul>
-            <li>Дизайн сайтов и интерфейсов: тёмные темы, анимации, адаптив под все экраны.</li>
-            <li>Полный цикл проекта: бриф → концепция → макет в Figma → вёрстка и хендофф.</li>
-            <li>Брендинг: логотипы, фирменный стиль, гайдлайны.</li>
+            <li data-i18n="exp1.li1">Дизайн сайтов и интерфейсов: тёмные темы, анимации, адаптив под все экраны.</li>
+            <li data-i18n="exp1.li2">Полный цикл проекта: бриф → концепция → макет в Figma → вёрстка и хендофф.</li>
+            <li data-i18n="exp1.li3">Брендинг: логотипы, фирменный стиль, гайдлайны.</li>
           </ul>
         </div>
       </div>
@@ -259,13 +297,13 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-head">
-            <h3>Freelance UI/UX Designer</h3>
-            <span class="tl-date">2023 — наст.</span>
+            <h3 data-i18n="exp2.title">Freelance UI/UX Designer</h3>
+            <span class="tl-date" data-i18n="exp.date1">2023 — наст.</span>
           </div>
-          <p class="tl-place">Удалённо</p>
+          <p class="tl-place" data-i18n="exp2.place">Удалённо</p>
           <ul>
-            <li>Мобильные и веб-интерфейсы по техническому заданию.</li>
-            <li>Подготовка экранов и графики для релиза: иконки, превью для сторов.</li>
+            <li data-i18n="exp2.li1">Мобильные и веб-интерфейсы по техническому заданию.</li>
+            <li data-i18n="exp2.li2">Подготовка экранов и графики для релиза: иконки, превью для сторов.</li>
           </ul>
         </div>
       </div>
@@ -273,10 +311,10 @@
         <div class="tl-dot"></div>
         <div class="tl-content">
           <div class="tl-head">
-            <h3>Образование · Самостоятельное обучение</h3>
-            <span class="tl-date">2023 — наст.</span>
+            <h3 data-i18n="exp3.title">Образование · Самостоятельное обучение</h3>
+            <span class="tl-date" data-i18n="exp.date1">2023 — наст.</span>
           </div>
-          <p>Гайдлайны iOS HIG и Material Design, дизайн-системы, прототипирование и онлайн-практика.</p>
+          <p data-i18n="exp3.text">Гайдлайны iOS HIG и Material Design, дизайн-системы, прототипирование и онлайн-практика.</p>
         </div>
       </div>
     </div>
@@ -286,9 +324,9 @@
   <section id="contact" class="section contact-section">
     <div class="contact-box">
       <div class="contact-glow"></div>
-      <p class="section-tag">05 · СВЯЗЬ С БАЗОЙ</p>
-      <h2 class="section-title">Готов присоединиться к команде</h2>
-      <p class="section-sub">Junior Mobile / UI/UX Designer · удалённо · полная занятость или стажировка</p>
+      <p class="section-tag">06 · <span data-i18n="contact.tag">СВЯЗЬ С БАЗОЙ</span></p>
+      <h2 class="section-title" data-i18n="contact.title">Готов присоединиться к команде</h2>
+      <p class="section-sub" data-i18n="contact.sub">Junior Mobile / UI/UX Designer · удалённо · полная занятость или стажировка</p>
       <div class="contact-actions">
         <a href="mailto:sakenserikov58@gmail.com" class="btn btn-primary">sakenserikov58@gmail.com</a>
         <a href="https://wa.me/77479537531" class="btn btn-ghost">+7 747 953 75 31</a>
@@ -304,11 +342,11 @@
 </main>
 
 <footer class="footer">
-  <p>Сакен Сериков · UI/UX &amp; Mobile Designer · Алматы, Казахстан</p>
-  <p class="footer-year">© 2026 — миссия продолжается</p>
+  <p data-i18n="footer.line1">Сакен Сериков · UI/UX &amp; Mobile Designer · Алматы, Казахстан</p>
+  <p class="footer-year" data-i18n="footer.line2">© 2026 — миссия продолжается</p>
 </footer>
 
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
-
